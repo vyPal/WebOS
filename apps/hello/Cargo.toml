@@ -1,0 +1,14 @@
+[package]
+name = "hello"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+os-sdk = { path = "../../os-sdk" }
+
+[profile.release]
+panic = "abort"
+lto = true
